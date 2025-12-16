@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f4f6fb;
+        }
+
+        /* ===== NAVBAR ===== */
+        header {
+            background: #ffffff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.8s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2575fc;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            left: 0;
+            bottom: -6px;
+            background: #2575fc;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2575fc;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .login-btn {
+            border: 2px solid #2575fc;
+            padding: 6px 16px;
+            border-radius: 20px;
+            color: #2575fc;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #2575fc;
+            color: white;
+        }
+
+        .register-btn {
+            background: #2575fc;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #1a5ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 20px;
+            animation: fadeIn 1.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .about h1 {
+            font-size: 42px;
+            color: #2575fc;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.7;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: #2575fc;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: #666;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="navbar">
+            <div class="logo">MyWebsite</div>
+
+            <nav class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ABOUT CONTENT -->
+    <section class="about">
+        <h1>About Us</h1>
+        <p>
+            We create modern, user-friendly web experiences using clean UI,
+            smooth animations, and scalable design practices.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Our Mission</h3>
+                <p>
+                    To build fast, responsive, and beautiful websites that
+                    improve user experience and productivity.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Our Vision</h3>
+                <p>
+                    Empower developers and businesses with modern web
+                    technologies and best design practices.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Why Choose Us</h3>
+                <p>
+                    Clean design, smooth animations, responsive layouts,
+                    and scalable code structure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
