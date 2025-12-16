@@ -1,0 +1,7 @@
+Django==6.0
+psycopg2-binary==2.9.9   # Only if you use PostgreSQL, skip for SQLite
+pytz==2025.7
+sqlparse==0.4.4
+asgiref==3.7.2
+gunicorn==21.2.0          # Optional, for deployment
+whitenoise==6.5.0         # Optional, for static files
